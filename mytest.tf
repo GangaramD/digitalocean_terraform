@@ -1,7 +1,7 @@
 resource "digitalocean_droplet" "web" {
     image = "ubuntu-16-04-x64"
     name = "mytest"
-    region = "blr1"
+    region = "blr1"  #Bangalore region
     size = "s-1vcpu-1gb"
     private_networking = true
     ssh_keys = [
