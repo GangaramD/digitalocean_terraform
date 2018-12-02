@@ -17,10 +17,10 @@
 
 2. Get the MD5 SHA of you rsa_pub key:
 
-	To get the SHa values: 
+	To get the SHA values: 
 	
 		ssh-keygen -E md5 -lf ~/.ssh/id_rsa.pub | awk '{print $2}'
-   		MD5:68:d3:3e:fr:rg:rt:67:67:34:56:67:as:
+   		MD5:68:d3:3e:fr:rg:rt:67:67:34:56:67:as:rf
 
 2.2 Add you rsa_pub key to your Digital ocean 
 
@@ -37,7 +37,7 @@
 			-var "do_token=${DO_PAT}" \
 			-var "pub_key=$HOME/.ssh/id_rsa.pub" \
 			-var "pvt_key=$HOME/.ssh/id_rsa" \
-			-var "ssh_fingerprint=your SHA value" 
+			-var "ssh_fingerprint=your_SHA_value"  #with out MD5 prefix 68:d3:3e:fr:rg:rt:67:67:34:56:67:as:rf 
 
 
 
