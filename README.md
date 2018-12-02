@@ -1,4 +1,4 @@
-# Digitalocean_terraform
+# Launch Droplet in Digital ocean using terraform
 
 
 # Setps to install Terraform:
