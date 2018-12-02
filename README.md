@@ -13,13 +13,14 @@
 
 1. Generate a api token from the digitalocean UI and export it to the terminal,
 
- 	export DO_PAT=YOUR_PERSONAL_ACCESS_TOKEN
+ 		export DO_PAT=YOUR_PERSONAL_ACCESS_TOKEN
 
 2. Get the MD5 SHA of you rsa_pub key:
 
-	To get the SHa values: ssh-keygen -E md5 -lf ~/.ssh/id_rsa.pub | awk '{print $2}'
-
-   	MD5:68:d3:3e:fr:rg:rt:67:67:34:56:67:as:
+	To get the SHa values: 
+	
+		ssh-keygen -E md5 -lf ~/.ssh/id_rsa.pub | awk '{print $2}'
+   		MD5:68:d3:3e:fr:rg:rt:67:67:34:56:67:as:
 
 2.2 Add you rsa_pub key to your Digital ocean 
 
@@ -28,15 +29,15 @@
 
 4. Initailase the project directory.
 
-	$terraform init
+		$terraform init
 
 5. Now test the project sing the terraform plan, it downloads the respective plugin.
 
-  	$terraform plan \
-    		-var "do_token=${DO_PAT}" \
-    		-var "pub_key=$HOME/.ssh/id_rsa.pub" \
-    		-var "pvt_key=$HOME/.ssh/id_rsa" \
-    		-var "ssh_fingerprint=your SHA value" 
+		$terraform plan \
+			-var "do_token=${DO_PAT}" \
+			-var "pub_key=$HOME/.ssh/id_rsa.pub" \
+			-var "pvt_key=$HOME/.ssh/id_rsa" \
+			-var "ssh_fingerprint=your SHA value" 
 
 
 
