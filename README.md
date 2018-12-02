@@ -1,4 +1,4 @@
-# digitalocean_terraform
+# Digitalocean_terraform
 
 
 # Setps to install Terraform:
