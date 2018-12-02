@@ -13,13 +13,14 @@
 
 1. Generate a api token from the digitalocean UI and export it to the terminal,
 
- 		export DO_PAT=YOUR_PERSONAL_ACCESS_TOKEN
+ 		$export DO_PAT=YOUR_PERSONAL_ACCESS_TOKEN
 
 2. Get the MD5 SHA of you rsa_pub key:
 
 	To get the SHA values: 
 	
-		ssh-keygen -E md5 -lf ~/.ssh/id_rsa.pub | awk '{print $2}'
+		$ssh-keygen -E md5 -lf ~/.ssh/id_rsa.pub | awk '{print $2}'
+		
    		MD5:68:d3:3e:fr:rg:rt:67:67:34:56:67:as:rf
 
 2.2 Add you rsa_pub key to your Digital ocean 
